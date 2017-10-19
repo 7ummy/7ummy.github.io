@@ -14,7 +14,7 @@ npm install #安装package.json中的依赖
 ```
 
 敲完上述指令，hexo的雏形就出来了
-
+![hexo](/images/hexo site.png)
 <!--more-->
 
 **tips:** 
@@ -108,6 +108,62 @@ category 层级分类
 tag 同级分类
 
 在 `Front-matter` 中设置 layout: false
+
+### 多终端同步
+
+**github配置** 
+
+```shell
+初始化本地仓库： git init
+
+添加本地所有文件到仓库：git add -A
+
+添加commit：git commit -m "blog源文件"
+
+添加本地仓库分支hexo：git branch hexo
+
+添加远程仓库：git remote add origin git@github.com:yourname/yourname.github.io.git
+
+将本地仓库的源文件分支hexo强制推送到远程仓库hexo分支：git push origin hexo -f 
+
+注意这里有个巨大的坑！！！如果你用的是第三方的主题theme，是使用git clone下来的话，要把主题文件夹下面把.git文件夹删除掉，不然主题无法push到远程仓库，导致你发布的博客是一片空白
+```
+
+**其它终端配置** 
+
+```shell
+git clone -b hexo git@github.com:yourname/yourname.github.io.git  //将Github中hexo分支clone到本地
+
+cd  yourname.github.io  //切换到刚刚clone的文件夹内
+
+npm install    //注意，这里一定要切换到刚刚clone的文件夹内执行，安装必要的所需组件，不用再init
+
+hexo new post "new blog name"   //新建一个.md文件，并编辑完成自己的博客内容
+
+git add source  //经测试每次只要更新sorcerer中的文件到Github中即可，因为只是新建了一篇新博客
+
+git commit -m "XX"
+
+git push origin hexo  //更新分支
+
+hexo d -g   //push更新完分支之后将自己写的博客对接到自己搭的博客网站上，同时同步了Github中的master
+```
+
+**终端同步** 
+
+```shell
+git pull origin hexo  //先pull完成本地与远端的融合
+
+hexo new post " new blog name"
+
+git add source
+
+git commit -m "XX"
+
+git push origin hexo
+
+hexo d -g
+```
 
 ## 主题配置
 
@@ -447,7 +503,11 @@ motion:
 
 TODO:
 
-启用资源文件夹来存放文章需要使用的图片等
+启用资源文件夹来存放文章需要使用的图片等，markdown的引用可以将图片放在source/images下
+
+注：启用的资源文件不要含有空格，因为通过`标签插件` 引用的时候是根据空格来做判断的，且此时直接输入文件名即可不用再加文件路径
+
+保存图片，大图建议使用.jpg格式，小图建议使用.png格式
 
 启用数据文件夹来试验next主题配置功能
 
