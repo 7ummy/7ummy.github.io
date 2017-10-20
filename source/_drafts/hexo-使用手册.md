@@ -103,6 +103,8 @@ $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 
 ### 写作
 
+hexo new 
+
 category 层级分类
 
 tag 同级分类

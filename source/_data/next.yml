@@ -86,11 +86,19 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git 
+- type: git 
   repo: git@github.com:7ummy/7ummy.github.io.git
   branch: master
   name: 7ummy
   email: 605847529@qq.com
+- type: rsync
+  host: 45.79.151.239
+  user: charlie
+  root: /home/charlie/hexo
+  port: 22
+  delete: true
+  verbose: true
+  ignore_errors: false
 
 #local_search
 search:
