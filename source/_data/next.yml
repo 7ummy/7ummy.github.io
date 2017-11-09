@@ -95,7 +95,7 @@ deploy:
   host: 97.107.136.249
   user: charlie
   root: /home/charlie/hexo
-  port: 22
+  port: 873
   delete: true
   verbose: true
   ignore_errors: false
