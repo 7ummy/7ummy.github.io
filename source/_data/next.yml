@@ -92,7 +92,7 @@ deploy:
   name: 7ummy
   email: 605847529@qq.com
 - type: rsync
-  host: 45.79.151.239
+  host: 97.107.136.249
   user: charlie
   root: /home/charlie/hexo
   port: 22
