@@ -94,3 +94,6 @@ vim ~/.ssh/id_rsa.pub
 ```shell
 ssh -T git@github.com
 ```
+WINDOWS下报换行错误
+
+git config --global core.autocrlf false

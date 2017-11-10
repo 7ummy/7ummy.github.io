@@ -94,8 +94,8 @@ deploy:
 - type: rsync
   host: 97.107.136.249
   user: charlie
-  root: /home/charlie/hexo
-  port: 873
+  root: /home/charlie/hexo/
+  port: 22
   delete: true
   verbose: true
   ignore_errors: false
