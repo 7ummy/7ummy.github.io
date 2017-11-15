@@ -339,7 +339,7 @@ post_wordcount:
 
 ### 第三方服务
 
-在多方评论都挂掉，`Hypercomments` 要翻墙的情况下，这里出现了`Gitment` ，fxxking awesome！！！
+在多方评论都挂掉，`Hypercomments` 要翻墙的情况下，这里出现了`Gitment` 
 
 ```shell
 # Gitment
@@ -521,5 +521,5 @@ TODO:
 
 查看github账户信息
 
-https://api.github.com/users/7ummy
+https://api.github.com/users/$yourname/
 
