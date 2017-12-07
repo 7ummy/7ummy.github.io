@@ -4,8 +4,8 @@
 
 # Site
 title: PEANUTS
-subtitle: 好的艺术家复制作品,伟大的艺术家窃取灵感
-description: 游戏人生，何须读档
+subtitle: Asperger syndrome
+description: 游戏人生，不能读档
 author: Charlie Brown
 language: zh-Hans
 timezone:
@@ -34,7 +34,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
