@@ -509,9 +509,9 @@ gitment:
   # Force language, or auto switch by theme
   language: 
   # MUST HAVE, Your Github ID
-  github_user: 22295537
+  github_user: 7ummy
   # MUST HAVE, The repo you use to store Gitment comments
-  github_repo: 7ummy.github.io.git
+  github_repo: 7ummy.github.io
   # MUST HAVE, Github client id for the Gitment
   client_id: 451315d704e837c8b60b
   # EITHER this or proxy_gateway, Github access secret token for the Gitment
