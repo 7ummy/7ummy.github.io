@@ -24,6 +24,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
 
 
 
@@ -165,7 +169,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">好的艺术家复制作品，伟大的艺术家窃取灵感</p>
+        <p class="site-subtitle">好的艺术家复制作品，伟大的艺术家窃取灵感。</p>
       
   </div>
 
@@ -293,7 +297,7 @@
       
       
       
-      <div class="post-body">
+      <div class="post-body han-init-context">
         
         
           <!DOCTYPE HTML>
@@ -331,6 +335,13 @@
           
 
   
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
 
 
 
@@ -360,9 +371,9 @@
             
               <img class="site-author-image" itemprop="image"
                 src="/images/avatar.jpg"
-                alt="Charlie Brown" />
+                alt="Charlie" />
             
-              <p class="site-author-name" itemprop="name">Charlie Brown</p>
+              <p class="site-author-name" itemprop="name">Charlie</p>
               <p class="site-description motion-element" itemprop="description">游戏人生，何须读档</p>
           </div>
 
@@ -442,7 +453,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Charlie Brown</span>
+  <span class="author" itemprop="copyrightHolder">Charlie</span>
 
   
 </div>
@@ -601,6 +612,48 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: '22295537',
+            repo: 'git@github.com:7ummy/7ummy.github.io.git',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '15ac9292768a0a562ed4ed2bb7bbbbf0bfa041da',
+            
+                client_id: 'd594905dca525980659b'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
