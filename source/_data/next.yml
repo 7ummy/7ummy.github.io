@@ -4,9 +4,9 @@
 
 # Site
 title: PEANUTS
-subtitle: 好的艺术家复制作品，伟大的艺术家窃取灵感
+subtitle: 好的艺术家复制作品，伟大的艺术家窃取灵感。
 description: 游戏人生，何须读档
-author: Charlie Brown
+author: Charlie
 language: zh-Hans
 timezone:
 
@@ -332,7 +332,7 @@ post_meta:
 post_wordcount:
   item_text: true
   wordcount: false
-  min2read: false
+  min2read: true
   totalcount: false
   separated_meta: true
 
@@ -448,7 +448,7 @@ mathjax:
   cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # Han Support docs: https://hanzi.pro/
-han: false
+han: true
 
 # Swiftype Search API Key
 #swiftype_key:
@@ -497,7 +497,7 @@ valine:
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
 gitment:
-  enable: false
+  enable: true
   # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
   mint: true
   # Show comments count in post meta area
@@ -511,7 +511,7 @@ gitment:
   # MUST HAVE, Your Github ID
   github_user: 22295537
   # MUST HAVE, The repo you use to store Gitment comments
-  github_repo: Gitment
+  github_repo: git@github.com:7ummy/7ummy.github.io.git
   # MUST HAVE, Github client id for the Gitment
   client_id: d594905dca525980659b
   # EITHER this or proxy_gateway, Github access secret token for the Gitment
