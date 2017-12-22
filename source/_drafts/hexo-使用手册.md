@@ -147,7 +147,7 @@ post_asset_folder: true
 
 将本地仓库的源文件分支hexo强制推送到远程仓库hexo分支：git push origin hexo -f 
 
-注意这里有个巨大的坑！！！如果你用的是第三方的主题theme，是使用git clone下来的话，要把主题文件夹下面把.git文件夹删除掉，不然主题无法push到远程仓库，导致你发布的博客是一片空白
+git clone下来的第三方主题可能会导致你发布的博客是一片空白，这时候我们需要将主题文件夹.git文件夹禁止加入到版本库中，在.gitignore文件中添加语句或者是在.git/info/exclude中添加
 ```
 
 **其它终端配置** 

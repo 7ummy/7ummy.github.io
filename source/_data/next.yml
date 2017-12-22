@@ -497,7 +497,7 @@ valine:
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
 gitment:
-  enable: true
+  enable: false
   # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
   mint: true
   # Show comments count in post meta area
