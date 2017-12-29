@@ -119,3 +119,5 @@ Code Smell中文译名一般为“代码异味”，或“代码味道”，它�
 15. 注释(Comments)
 
     经常觉得要写很多注释表示你的代码难以理解。如果这种感觉太多，表示你需要Refactoring。
+
+FROM:https://en.wikipedia.org/wiki/Code_smell
