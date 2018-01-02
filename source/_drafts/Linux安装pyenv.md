@@ -1,5 +1,6 @@
 ---
 title: Linux安装pyenv
+date: 2017/10/17 20:13:55
 tags:
 - Linux
 ---

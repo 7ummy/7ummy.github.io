@@ -1,5 +1,6 @@
 ---
 title: RF Getting Started
+date: 2017/10/17 19:53:18
 tags:
 - test
 ---
@@ -50,5 +51,5 @@ tags:
 
 
 ```shell
-pip install -U robotframework-databaselibrary
+pip install -U robotframework-databaselibrary	
 ```

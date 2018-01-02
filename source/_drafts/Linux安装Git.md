@@ -1,5 +1,6 @@
 ---
 title: Linux安装Git
+date: 2017/10/17 20:50:08
 tags:
 - Linux
 ---

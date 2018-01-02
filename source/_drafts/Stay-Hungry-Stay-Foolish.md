@@ -1,5 +1,6 @@
 ---
 title: 'Stay Hungry, Stay Foolish.'
+date: 2017/12/1 18:45:22
 tags:
 ---
 2005年，Steve Jobs 在Stanford 毕业典礼上演讲，最后送给了在场的年轻人一句`Stay Hungry, Stay Foolish.` 这个演讲后来被广为流传，各种中译版也纷纷出现，有些人把这句话翻译为`求知若饥，虚心若愚` ，《Cheers 杂志》则把这句话翻译为`饥渴求知，虚怀若愚` 。无论如何，我认为这些都是错误的解读。
