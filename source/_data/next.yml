@@ -81,7 +81,7 @@ tag_generator:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 #theme: landscape
-theme: next
+theme: next-reloaded
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -115,6 +115,9 @@ search:
 # Useful if you don't want to inherit the theme _config.yml configurations.
 override: false
 
+# Allow to cache content generation. Introduced in NexT v6.0.0.
+cache:
+  enable: true
 # ---------------------------------------------------------------
 # Site Information Settings
 # ---------------------------------------------------------------
@@ -136,7 +139,7 @@ favicon:
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "Hexo, NexT, 测试, 博客, Linux, Py"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -159,7 +162,7 @@ footer:
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
     version: false
   # -------------------------------------------------------------
@@ -202,10 +205,10 @@ menu:
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
-# Enable/Disable menu icons.
-menu_icons:
-  enable: true
-
+# Enable/Disable menu icons / item badges.
+menu_settings:
+  icons: true
+  badges: true
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -222,6 +225,8 @@ scheme: Gemini
 # Sidebar Settings
 # ---------------------------------------------------------------
 
+# Posts / Categories / Tags in sidebar.
+site_state: true
 # Social Links.
 # Usage: `Key: permalink || icon`
 # Key is the link label showing to end users.
@@ -298,7 +303,7 @@ sidebar:
   scrollpercent: true
 
   # Enable sidebar on narrow view (only for Muse | Mist).
-  onmobile: false
+  onmobile: true
 
 
 # ---------------------------------------------------------------
@@ -312,7 +317,7 @@ scroll_to_more: false
 save_scroll: false
 
 # Automatically excerpt description in homepage as preamble text.
-excerpt_description: true
+excerpt_description: false
 
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
@@ -328,13 +333,18 @@ post_meta:
   categories: true
 
 # Post wordcount display settings
-# Dependencies: https://github.com/willin/hexo-wordcount
-post_wordcount:
-  item_text: true
-  wordcount: false
-  min2read: true
-  totalcount: false
+# Dependencies: https://github.com/theme-next/hexo-symbols-count-time
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: false
   separated_meta: false
+  item_text_post: true
+  item_text_total: false
+  awl: 5
+  wpm: 200
+
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -414,7 +424,7 @@ font:
   # Fallback to `global` font settings.
   headings:
     external: true
-    family:
+    family: Roboto Slab
     size:
 
   # Font settings for posts.
@@ -433,7 +443,7 @@ font:
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family:
+    family: Roboto Mono
     size:
 
 
@@ -447,7 +457,8 @@ mathjax:
   per_page: false
   cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
-# Han Support docs: https://hanzi.pro/
+# Han Support
+# Dependencies: https://github.com/theme-next/theme-next-han                                                            
 han: true
 
 # Swiftype Search API Key
@@ -477,7 +488,7 @@ changyan:
 
 # Valine.
 # You can get your appid and appkey from https://leancloud.cn
-# more info please open https://github.com/xCss/Valine
+# more info please open https://valine.js.org
 valine:
   enable: false
   appid:  # your leancloud application appid
@@ -544,7 +555,7 @@ gitment:
 #duoshuo_share: true
 
 # NeedMoreShare2
-# This plugin is a pure javascript sharing lib which is useful in China.
+# Dependencies: https://github.com/theme-next/theme-next-needmoreshare2
 # See: https://github.com/revir/need-more-share2
 # Also see: https://github.com/DzmVasileusky/needShareButton
 # iconStyle: default | box
@@ -702,6 +713,7 @@ calendar:
   maxResults: 250
 
 # Algolia Search
+# Dependencies: https://github.com/theme-next/theme-next-algolia-instant-search                                                                               
 algolia_search:
   enable: false
   hits:
@@ -712,7 +724,7 @@ algolia_search:
     hits_stats: "${hits} results found in ${time} ms"
 
 # Local search
-# Dependencies: https://github.com/flashlab/hexo-generator-search
+# Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
   enable: true
   # if auto, trigger search by changing input
@@ -756,6 +768,12 @@ tabs:
     labels: true
   border_radius: 0
 
+# Reading progress bar
+# Dependencies: https://github.com/theme-next/theme-next-reading-progress
+reading_progress:
+  enable: false
+  color: "#37c6c0"
+  height: 2px
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
@@ -779,13 +797,23 @@ motion:
     post_body: slideDownIn
     coll_header: slideLeftIn
     # Only for Pisces | Gemini.
-    sidebar: slideUpIn
+    sidebar: fadeIn
 
 # Fancybox
+# Dependencies: https://github.com/theme-next/theme-next-fancybox
 fancybox: true
 
+# Added switch option for separated repo in 6.0.0.
+# Dependencies: https://github.com/theme-next/theme-next-fastclick
+fastclick: true
+
+# Added switch option for separated repo in 6.0.0.
+# Dependencies: https://github.com/theme-next/theme-next-jquery-lazyload
+lazyload: true            
+
 # Progress bar in the top during page loading.
-pace: true
+# Dependencies: https://github.com/theme-next/theme-next-pace
+pace: true           
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce
@@ -805,8 +833,11 @@ pace: true
 pace_theme: pace-theme-flash
 
 # Canvas-nest
+# Dependencies: https://github.com/theme-next/theme-next-canvas-nest                                                                    
 canvas_nest: false
 
+# JavaScript 3D library.
+# Dependencies: https://github.com/theme-next/theme-next-three                                                             
 # three_waves
 three_waves: false
 
@@ -817,6 +848,7 @@ canvas_lines: false
 canvas_sphere: false
 
 # Only fit scheme Pisces
+# Dependencies: https://github.com/theme-next/theme-next-canvas-ribbon                                                                      
 # Canvas-ribbon
 # size: The width of the ribbon.
 # alpha: The transparency of the ribbon.
@@ -824,7 +856,7 @@ canvas_sphere: false
 canvas_ribbon:
   enable: false
   size: 300
-  alpha: 0.6
+  alpha: 0.5
   zIndex: -1
 
 # Script Vendors.
@@ -920,4 +952,4 @@ js: js
 images: images
 
 # Theme version
-version: 5.1.4
+version: 6.0.0
