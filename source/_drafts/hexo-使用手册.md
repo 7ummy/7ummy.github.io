@@ -2,6 +2,9 @@
 title: hexo 使用手册
 date: 2017/12/1 18:41:42
 tags:
+categories:
+- [hexo, 站点配置]
+- [hexo, 主题配置]
 ---
 ## 简单上手
 

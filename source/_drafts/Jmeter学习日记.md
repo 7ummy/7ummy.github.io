@@ -3,6 +3,8 @@ title: Jmeter学习笔记
 date: 2017/10/17 19:59:39
 tags:
 - test
+categories:
+- [软件测试, 性能测试]
 ---
 ## Aggregate Report
 

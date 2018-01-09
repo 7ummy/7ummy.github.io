@@ -2,6 +2,9 @@
 title: Raspbbery Pi 使用手册
 date: 2017-10-17 10:08:04
 tags: Linux
+categories:
+- 运维
+- 树莓派
 ---
 **注：**推荐裸板，自己动手丰衣足食。[官方文档](https://www.raspberrypi.org/documentation/)
 

@@ -3,6 +3,9 @@ title: Linux安装pyenv
 date: 2017/10/17 20:13:55
 tags:
 - Linux
+categories:
+- [运维, 环境]
+- [开发, Py系列, 环境]
 ---
 ## 1.安装python依赖
 

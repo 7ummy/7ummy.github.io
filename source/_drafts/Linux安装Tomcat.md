@@ -3,6 +3,8 @@ title: Linux安装Tomcat
 date: 2017/10/17 20:58:42
 tags:
 - Linux
+categories:
+- [运维, 环境]
 ---
 ## 0.解压缩
 

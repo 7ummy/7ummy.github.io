@@ -4,6 +4,8 @@ date: 2017/10/17 20:22:22
 tags:
 - dev
 - Python
+categories:
+- [开发, Py系列, 环境]
 ---
 ## 我应该下载Anaconda还是Miniconda？
 

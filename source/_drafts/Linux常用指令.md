@@ -3,6 +3,8 @@ title: Linux常用指令
 date: 2017/10/17 20:53:43
 tags:
 - Linux
+categories:
+- [运维, 指令]
 ---
 ## 常用终端快捷键 
 

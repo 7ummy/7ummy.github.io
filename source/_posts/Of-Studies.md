@@ -2,6 +2,9 @@
 title: Of Studies
 date: 2018-01-05 16:03:45
 tags:
+categories:
+- [书山有路, 译文]
+- [书山有路, 经典]
 ---
 
 ## 王佐良译文

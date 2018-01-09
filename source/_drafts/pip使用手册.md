@@ -4,6 +4,8 @@ date: 2017/10/17 20:01:08
 tags:
 - dev
 - Python
+categories:
+- [开发, Py系列, pip]
 ---
 ## pip安装包
 

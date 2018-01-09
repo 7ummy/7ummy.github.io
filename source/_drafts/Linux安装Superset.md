@@ -3,6 +3,8 @@ title: Linux安装Superset
 date: 2017/10/17 20:53:04
 tags:
 - Linux
+categories:
+- [运维, 环境]
 ---
 # linux系统下安装Superset
 

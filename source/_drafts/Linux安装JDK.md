@@ -3,6 +3,9 @@ title: Linux安装JDK
 date: 2017/10/17 20:50:36
 tags:
 - Linux
+categories:
+- [运维, 环境]
+- [开发, Java系列, 环境]
 ---
 作为[Java](http://lib.csdn.net/base/17)开发人员，在Linux下安装一些开发工具是必备技能，本文以安装jdk为例，详细记录了每一步的操作命令，以供参考。
 

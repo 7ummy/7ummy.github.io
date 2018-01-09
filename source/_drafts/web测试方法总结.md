@@ -3,6 +3,9 @@ title: web测试方法总结
 date: 2017/10/17 20:02:53
 tags:
 - test
+categories:
+- 软件测试
+- 测试基础
 ---
 ## web测试方法总结
 

@@ -3,6 +3,9 @@ title: cookie和session找不同
 date: 2017/10/17 19:55:20
 tags:
 - dev
+categories:
+- [网络通信, diff]
+- [网络通信, cookie&session]
 ---
 ## 二者的定义：
 
