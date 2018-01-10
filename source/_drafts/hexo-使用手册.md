@@ -159,6 +159,41 @@ git push origin hexo
 hexo d -g
 ```
 
+### 更新依赖
+
+**npm全局更新**
+
+```shell
+npm update -g
+```
+
+npm更新站点`package.json` 中的依赖包
+
+```shell
+cd ~/blog/ # 跳转到博客的根目录下
+npm update
+```
+
+**更新npm** 
+
+```shell
+npm install npm -g
+```
+
+**更新Node.js**
+
+```shell
+npm install n -g
+```
+
+### Git解决冲突
+
+```shell
+git stash # 存储本地修改
+git pull # 获取更新
+git stash pop # 还原暂存内容
+```
+
 ## 主题配置
 
 > 在 Hexo 中有两份主要的配置文件，其名称都是 `_config.yml`。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。

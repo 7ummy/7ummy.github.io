@@ -106,6 +106,30 @@ search:
   field: post
   format: html
   limit: 10000
+ 
+# Live2D
+## https://github.com/EYHN/hexo-helper-live2d
+live2d:
+  model: tororo # The model that you are willing to show. default: z16
+  width: 150 # The width of your model. default: 150
+  height: 300 # The height of your model. default: 300
+  scaling: 1 # The scaling of the resolution. default: 2
+  opacityDefault: 0.7 # The default opacity. default: 0.7
+  opacityHover: 1 # The opacity when hover. default: 1
+  mobileShow: true # Whether to show on mobile devices. default: true
+  mobileScaling: 0.5 # The scaling on mobile. default: 0.5
+  position: right # Which side the model is shown at. default: right
+  horizontalOffset: 0 # The horizontal offset. default: 0
+  verticalOffset: -20 # The offset of the bottom. default: -20
+  id: live2dcanvas # The ID of the live2d element. default: live2dcanvas
+  deviceJsSource: local # The source of the current-device script. default: local
+
+# hexo-tag-cloud
+#tag_cloud:
+#   textFont: Trebuchet MS, Helvetica
+#   textColour: \#333
+#   textHeight: 25
+#   outlineColour: \#E2E1D1
 
 # ---------------------------------------------------------------
 # Theme Core Configuration Settings
@@ -197,10 +221,10 @@ index_with_subtitle: false
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
-  about: /about/ || user
   tags: /tags/ || tags
   #categories: /categories/ || th
   archives: /archives/ || archive
+  about: /about/ || user
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -774,6 +798,10 @@ reading_progress:
   enable: false
   color: "#37c6c0"
   height: 2px
+
+# Online contact 
+daovoice: true
+daovoice_app_id: 46de47d1
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
