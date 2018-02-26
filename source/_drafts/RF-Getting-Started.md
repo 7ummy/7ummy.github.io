@@ -6,9 +6,8 @@ tags:
 categories:
 - [软件测试, robot framework]
 ---
-## 安装配置
 
-###基本配置
+## 基本配置
 
 **python2.7** :
 
@@ -34,7 +33,7 @@ categories:
 
 
 
-###备注
+## 备注
 
 若安装RobotFramework-ride没有自动创建桌面快捷方式，我们要么命令行走起，要么自己搞个快捷方式。**命令行** ：
 
@@ -49,8 +48,6 @@ categories:
 同样，若是启动失败了。右键快捷方式选择属性，在高级中勾选`用管理员的身份运行` 。
 
 若安装wxPython失败，查看一下版本是否是对应的版本，我这边因为是通过conda安装的，所以安装wxPython的时候一直提示没有找到python2.7的注册信息。这是因为在安装miniconda时没有勾选将miniconda以python2.7默认注册到系统。
-
-
 
 ```shell
 pip install -U robotframework-databaselibrary	

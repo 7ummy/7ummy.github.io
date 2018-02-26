@@ -6,7 +6,7 @@ tags:
 categories:
 - [运维, 环境]
 ---
-## 0.解压缩
+## 解压缩
 
 ```shell
 # mkdir /usr/local/tomcat
@@ -70,11 +70,12 @@ Tomcat started.
 出现tomcat的页面表示安装成功.
 
 停止Tomcat
-```# shell./shutdown.sh```
+```shell
+# shell./shutdown.sh
+```
 
-
-##1.配置web管理帐号
-   修改文件conf/tomcat-users.xml，在<tomcat-users>元素中添加帐号密码，需要指定角色.
+## 配置web管理帐号
+   修改文件conf/tomcat-users.xml，在`<tomcat-users>`元素中添加帐号密码，需要指定角色.
 
 ```shell
 # vi /usr/local/tomcat/server/conf/tomcat-users.xml
@@ -87,16 +88,18 @@ Tomcat started.
 ```
 
 
-##2.配置web访问端口
+## 配置web访问端口
    可以修改conf目录下的文件server.xml，修改Connector元素(Tomcat的默认端口是8080)，需要重新启动Tomcat服务生效.
 
 ```shell
 vi /usr/local/tomcat/server/conf/server.xml
 ```
 
- ```<Connector port="80" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" /> ```
+```shell
+<Connector port="80" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" /> 
+```
 
-##3.配置https安全连接(ssl加密连接)
+## 配置https安全连接(ssl加密连接)
 https连接需要用到数字证书与数字签名(MD5算法)
 网站https连接首先需要申请数字证书，配置加密连接器，浏览器安装证书.
 使用java的工具keytool产生数字证书
@@ -128,7 +131,7 @@ https连接需要用到数字证书与数字签名(MD5算法)
 重新启动tomcat.浏览器输入https://localhost:8443访问,并安装证书.
 
 
-##4.Tomcat的目录结构
+## Tomcat的目录结构
 | 目录       | 使用                                |
 | -------- | --------------------------------- |
 | ·bin     | 存放Tomcat的命令脚本文件                   |
@@ -140,62 +143,57 @@ https连接需要用到数字证书与数字签名(MD5算法)
 | ·work    | Tomcat的工作目录                       |
 
 
-##5.web应用的目录结构
+## web应用的目录结构
 webapp                                  -- web应用所在目录
 |--- html, jsp, css, js文件等  -- 这些文件一般在web应用根目录下，根目录下的文件外界可以直接访问.
 |--- WEB-INF 目录                 -- java类、jar包、web配置文件存在这个目录下，外界无法直接访问，由web服务器负责调用.
-​	|--- classes 目录            -- java类
-​	|--- lib 目录                    -- java类运行所需要的jar包
-​	|--- web.xml 文件         -- web应用的配置文件
+|--- classes 目录            -- java类
+|--- lib 目录                    -- java类运行所需要的jar包
+|--- web.xml 文件         -- web应用的配置文件
 
 
-##6.虚拟主机的配置
+## 虚拟主机的配置
 指定虚拟主机名,修改conf/server.xml,添加<host>元素.
 
 ```xml
-   <host name="hostname.domainname" appBase="/webapps">
-     <Context path="/webapp" docBase="/webapps/webapp"/>
-   </host>
+<host name="hostname.domainname" appBase="/webapps">
+<Context path="/webapp" docBase="/webapps/webapp"/>
+</host>
 ```
-
 
 例:
 
 ```xml
 <host name="www.163.com" appBase="/webapps">
-   </host>
-   <host name="mail.163.com" appBase="/mailapps">
-   </host>
+</host>
+<host name="mail.163.com" appBase="/mailapps">
+</host>
 ```
-
 
 须设置DNS解析(host文件或DNS系统).
 
-
-
-
-## 7.web应用和虚拟目录的映射.
-可以修改xml配置文件的<Context>元素来设置web应用和虚拟目录的映射.
+## web应用和虚拟目录的映射.
+可以修改xml配置文件的`<Context>`元素来设置web应用和虚拟目录的映射.
 
 | xml配置文件                                  | 设置web应用和虚拟目录的映射                          |
 | ---------------------------------------- | ---------------------------------------- |
-| ·conf/server.xml                         | 在```<host>```元素下添加```<Context path="/webdir" docBase="/webappdir"/>``` |
-| ·conf/context.xml                        | 添加```<Context>```元素所有web应用有效.            |
+| ·conf/server.xml                         | 在<host>元素下添加`<Context path="/webdir" docBase="/webappdir"/>` |
+| ·conf/context.xml                        | 添加<Context>元素所有web应用有效.            |
 | ·conf/[enginename]/[hostname]/context.xml.default | [enginename]一般是Catalina，主机[hostname]的所有web应用有效. |
 | ·conf/[enginename]/[hostname]/           | 在目录下任意建一个文件(扩展名xml),文件名即为虚拟目录名.多级目录使用#分割 |
-| ```.<Context docBase="/webappdir"/>```   | 缺省值web应用目录可以定义为ROOT.xml，添加```<Context docBase="/webappdir"/>```,需重新启动Tomcat服务器 |
+| `.<Context docBase="/webappdir"/>`   | 缺省值web应用目录可以定义为ROOT.xml，添加`<Context docBase="/webappdir"/>`,需重新启动Tomcat服务器 |
 | ·META-INF/context.xml                    | 可以将web应用放在webapps目录下让Tomcat服务器自动映射，适用开发环境，实际运用环境中不用自动映射 |
 
 如没有修改配置文件，web应用目录为ROOT时则为默认web应用。
 
 
-## 8.web应用首页(welcome file)的配置
+## web应用首页(welcome file)的配置
 修改web应用的配置文件: [webapp]/WEB-INF/web.xml
 
 ```xml
-    <welcome-file-list>
-       <welcome-file>index.html</welcome-file>
-       <welcome-file>index.htm</welcome-file>
-       <welcome-file>index.jsp</welcome-file>
-    </welcome-file-list>
+<welcome-file-list>
+  <welcome-file>index.html</welcome-file>
+  <welcome-file>index.htm</welcome-file>
+  <welcome-file>index.jsp</welcome-file>
+</welcome-file-list>
 ```

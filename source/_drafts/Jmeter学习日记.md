@@ -8,11 +8,11 @@ categories:
 ---
 ## Aggregate Report
 
-> For each request, it totals the response information and provides request count, min, max, average, error rate, approximate throughput (request/second) and Kilobytes per second throughput.
-
-<!--more-->
+> For each request, it totals the response information and provides request count, min, max, average, error rate, approximate throughput (request/second) and Kilobytes per second throughput.	
 
 对于每个请求，它总计响应信息，并提供请求计数，最小值，最大值，平均值，错误率，近似吞吐量（请求/秒）和每秒千字节吞吐量。
+
+<!--more-->
 
 | 列标题             | 含义             |
 | --------------- | -------------- |

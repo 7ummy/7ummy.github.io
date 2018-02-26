@@ -2,6 +2,7 @@
 title: hexo 使用手册
 date: 2017/12/1 18:41:42
 tags:
+- hexo
 categories:
 - [hexo, 站点配置]
 - [hexo, 主题配置]
@@ -20,7 +21,6 @@ npm install #安装package.json中的依赖
 敲完上述指令，hexo的雏形就出来了
 ![hexo](/images/hexo site.png)
 <!--more-->
-
 **tips:** 
 
 ```shell

@@ -70,7 +70,7 @@ $ pip install -e git+https://git.repo/some_pkg.git@feature#egg=SomePackage
 $ pip install -e "git+https://git.repo/some_repo.git#egg=subdir&subdirectory=subdir_path" # install a python package from a repo subdirectory
 ```
 
-##pip列出已安装的包
+## pip列出已安装的包
 
 ```
 $ pip list
@@ -121,7 +121,7 @@ $ pip uninstall SomePackage
   Successfully uninstalled SomePackage
 ```
 
-# pip参数解释
+## pip参数解释
 
 **Usage**
 
@@ -143,23 +143,23 @@ pip <command> [options]
 
 
 
-| General Options            | 说明                                       |
-| -------------------------- | ---------------------------------------- |
-| -h, --help                 | 显示帮助                                     |
-| -v, --verbose              | 详细信息                                     |
-| -V, --version              | 当前版本                                     |
-| -q, --quiet                | 简略信息                                     |
-| --log \<path>              | 添加详细信息的路径                                |
-| --proxy \<proxy>           | 代理  [user:passwd@]proxy.server:port      |
-| --retries \<retries>       | 重新连接（默认5次）                               |
-| --timeout \<sec>           | 连接超时时间 (默认15秒)                           |
-| --exists-action \<action>  | 当路径已存在时默认的操作: (s)witch, (i)gnore, (w)ipe, (b)ackup,(a)bort |
-| --cert \<path>             | 证书                                       |
-| --cache-dir \<dir>         | 缓存路径                                     |
-| --no-cache-dir             | 取消缓存路径                                   |
-| --trusted-host \<hostname> | 添加信任的网址                                  |
+| General Options             | 说明                                                         |
+| --------------------------- | ------------------------------------------------------------ |
+| -h, --help                  | 显示帮助                                                     |
+| -v, --verbose               | 详细信息                                                     |
+| -V, --version               | 当前版本                                                     |
+| -q, --quiet                 | 简略信息                                                     |
+| --log `<path>`              | 添加详细信息的路径                                           |
+| --proxy `<proxy>`           | 代理  [user:passwd@]proxy.server:port                        |
+| --retries `<retries>`       | 重新连接（默认5次）                                          |
+| --timeout `<sec>`           | 连接超时时间 (默认15秒)                                      |
+| --exists-action `<action>`  | 当路径已存在时默认的操作: (s)witch, (i)gnore, (w)ipe, (b)ackup,(a)bort |
+| --cert `<path>`             | 证书                                                         |
+| --cache-dir `<dir>`         | 缓存路径                                                     |
+| --no-cache-dir              | 取消缓存路径                                                 |
+| --trusted-host `<hostname>` | 添加信任的网址                                               |
 
-# 国内源
+## 国内源
 
 阿里云 [http://mirrors.aliyun.com/pypi/simple/](http://mirrors.aliyun.com/pypi/simple/)
 

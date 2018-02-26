@@ -3,11 +3,12 @@ title: Linux安装pyenv
 date: 2017/10/17 20:13:55
 tags:
 - Linux
+- Python
 categories:
 - [运维, 环境]
 - [开发, Py系列, 环境]
 ---
-## 1.安装python依赖
+## 安装python依赖
 
 ```shell
 $ yum -y update
@@ -17,13 +18,13 @@ $ yum install -y zlib-dev readline-devel openssl-devel sqlite-devel bzip2-devel
 
 <!--more-->
 
-## 2.通过GIT安装(推荐)
+## 通过GIT安装(推荐)
 
 ```shell
 $ curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 ```
 
-## 3.修改配置文件
+## 修改配置文件
 
 编辑配置文件`vi ~/.bash_profile`写入一下指令：
 
@@ -36,7 +37,7 @@ eval "$(pyenv virtualenv-init -)"
 
 命令行使用source指令使配置生效`source ~/.bash_profile`
 
-## 4.安装python
+## 安装python
 
 一般情况下`python install`指令下载缓慢，我们在*~/.pyenv*目录下创建一个*cache*文件夹存放python的tarball。
 

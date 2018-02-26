@@ -109,24 +109,6 @@ Seth GodinWelcome to Island Marketing
 
  {% endcq %}
 
-### 放大图片
-
-    <!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 -->
-    <!-- 其中 class="full-image" 是必须的 -->
-    <img src="/image-url" class="full-image" />
-    
-    <!-- 标签 方式，要求版本在0.4.5或以上 -->
-    {% fullimage /image-url, alt, title %}
-    
-    <!-- 别名 -->
-    {% fi /image-url, alt, title %}
-
-**效果示例：** 
-
-{% asset_img load.gif %}
-
-{% fi sky.jpg, 天空 %}
-
 ### Gist
 
 在文章中嵌入 Gist

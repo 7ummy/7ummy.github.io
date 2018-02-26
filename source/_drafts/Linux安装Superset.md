@@ -6,9 +6,9 @@ tags:
 categories:
 - [运维, 环境]
 ---
-# linux系统下安装Superset
+Superset是一款很棒的数据可视化开源方案，熟练运用它可以省去不少在Excel中做图的时间。
 
-## 1.安装依赖
+## 安装依赖
 
 ```shell
 $  yum upgrade python-setuptools
@@ -18,7 +18,7 @@ $  pip install --upgrade setuptools pip
 
 <!--more-->
 
-## 2.安装superset
+## 安装superset
 
 ```shell
 # Install superset
@@ -52,11 +52,11 @@ $ superset runserver
 $ nohup superset runserver -p 8088 &
 ```
 
-## 3.登录
+## 登录
 
 浏览器输入`localhost:8088`
 
-## 4.说明
+## 说明
 
 配置文档位置`$PYTHONPATH/superset/config.py`
 
@@ -66,7 +66,7 @@ $ nohup superset runserver -p 8088 &
 
 开源地址：[https://github.com/airbnb/superset](https://github.com/airbnb/superset)
 
-## 5.链接数据库
+## 链接数据库
 
 Here’s a list of some of the recommended packages.[SqlAlchemy docs](http://docs.sqlalchemy.org/en/rel_1_0/core/engines.html#database-urls)
 
@@ -86,7 +86,7 @@ Here’s a list of some of the recommended packages.[SqlAlchemy docs](http://doc
 | Vertica    | `pip install sqlalchemy-vertica-python` | `vertica+vertica_python://` |
 | ClickHouse | `pip install sqlalchemy-clickhouse`     | `clickhouse://`             |
 
-## 6.修改表单
+## 修改表单
 
 On the resulting page, click on the **List Table Column** tab. Here, you’ll define the way you can use specific columns of your table when exploring your data. We’ll run through these options to describe their purpose:
 
@@ -96,7 +96,7 @@ On the resulting page, click on the **List Table Column** tab. Here, you’ll de
 - Is this a metric you want to sum, or get basic summary statistics for? The **Sum**, **Min**, and **Max**columns will help.
 - The **is temporal** field should be checked for any date or time fields. We’ll cover how this manifests itself in analyses in a moment.
 
-## 7.Unicode
+## Unicode
 
 ```
 "mysql+pymysql://scott:tiger@localhost/test?charset=utf8"

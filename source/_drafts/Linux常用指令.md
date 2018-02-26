@@ -26,7 +26,6 @@ categories:
 | 删除前一个单词                   | ALT + Backspace |
 | 剪切光标前一个单词                 | CTRL + W        |
 | 向终端内粘贴文本                  | Shift + Insert  |
-|                           |                 |
 
 <!--more-->
 
@@ -73,8 +72,6 @@ categories:
 | 向“ 下” 搜 寻                 | n           |
 | 向“ 上” 搜 寻                 | N           |
 | 结 束 这 次 的 man page        | q           |
-
-
 
 ### useradd
 
@@ -124,17 +121,12 @@ useradd命令用于Linux中创建的新的系统用户。useradd可用来建立�
 | 输出文件的第一部分(默认前10行)(output the first part of files) | head    |
 | 输出文件的最后部分(默认后10行)(output the last part of files) | tail    |
 | 持续输出文件的最后部分                              | tail -f |
-|                                          |         |
-
-
 
 ### Linux管道
 
 将一个命令的标准输出作为另一个命令的标准输入。也就是把几个命令组合起来使用，后一个命令除以前一个命令的结果。
 
 例：grep -r "close" /home/* | more       在home目录下所有文件中查找，包括close的文件，并分页输出。
-
-
 
 ### 打包压缩相关命令
 
@@ -188,8 +180,6 @@ X           可执行  数值表示为1
 第八九十个字符“r--”表示其他用户权限。
 
 chmod 744 jdk-7u21-linux-i586.tar.gz
-
-
 
 ### vim使用
 
