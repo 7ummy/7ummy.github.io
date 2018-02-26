@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT, 测试, 博客, Linux, Py" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="游戏人生，何须读档">
+<meta name="keywords" content="Hexo, NexT, 测试, 博客, Linux, Py">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https://charlie17.xyz/categories/index.html">
+<meta property="og:site_name" content="PEANUTS">
+<meta property="og:description" content="游戏人生，何须读档">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-09T03:22:05.807Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="categories">
+<meta name="twitter:description" content="游戏人生，何须读档">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"fadeIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://charlie17.xyz/categories/"/>
+
+
+
+
+
+	<script>
+	(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/46de47d1.js","daovoice")
+	daovoice('init', {
+	  app_id: "46de47d1"
+	});
+	daovoice('update');
+	</script>
+
+
+  <title>web测试方法总结 | PEANUTS</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">PEANUTS</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">好的艺术家复制作品，伟大的艺术家窃取灵感。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+
+            
+              
+                首页
+              
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+
+            
+              
+                归档
+                <span class="badge">29</span>
+              
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+
+            
+              
+                标签
+                <span class="badge">6</span>
+              
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+
+            
+              
+                关于
+              
+            
+
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://charlie17.xyz/2017/10/web测试方法总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Charlie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PEANUTS">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">web测试方法总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-17T20:02:53+08:00">2017-10-17</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/软件测试/" itemprop="url" rel="index">
+                    <span itemprop="name">软件测试</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/软件测试/测试基础/" itemprop="url" rel="index">
+                    <span itemprop="name">测试基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-fire">&nbsp&nbsp热度</i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>℃
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">0:07</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="输入框"><a href="#输入框" class="headerlink" title="输入框"></a>输入框</h2><h3 id="字符型输入框"><a href="#字符型输入框" class="headerlink" title="字符型输入框"></a>字符型输入框</h3><ul>
+<li>字符型输入框：英文全角、英文半角、数字、空或者空格、特殊字符“~！@#￥%……&amp;*？[]{}”特别要注意单引号和&amp;符号。禁止直接输入特殊字符时，使用“粘贴、拷贝”功能尝试输入</li>
+<li>长度检查：最小长度、最大长度、最小长度-1、最大长度+1、输入超工字符比如把整个文章拷贝过去</li>
+<li>空格检查：输入的字符间有空格、字符前有空格、字符后有空格、字符前后有空格</li>
+<li>多行文本框输入：允许回车换行、保存后再显示能够保存输入的格式、仅输入回车换行，检查能否正确保存（若能，检查保存结果，若不能，查看是否有正常提示）</li>
+<li>安全性检查：输入特殊字符串<code>null,NULL, ,javascript,\&lt;script&gt;,\&lt;/script&gt;,\&lt;title&gt;,\&lt;html&gt;,\&lt;td&gt;</code>、输入脚本函数<code>\&lt;script&gt;alert(&quot;abc&quot;)\&lt;/script&gt;)、doucment.write(&quot;abc&quot;)、\&lt;b&gt;hello\&lt;/b&gt;</code></li>
+</ul>
+<a id="more"></a>
+<h3 id="数值型输入框"><a href="#数值型输入框" class="headerlink" title="数值型输入框"></a>数值型输入框</h3><ul>
+<li>边界值：最大值、最小值、最大值+1、最小值-1 </li>
+<li>位数：最小位数、最大位数、最小位数-1最大位数+1、输入超长值、输入整数 </li>
+<li>异常值、特殊字符：<ul>
+<li>输入空白（NULL）、空格或”~!@#$%^&amp;*()_+{}|[]\:”&lt;&gt;?;’,./?;:’-=等可能导致系统错误的字符。</li>
+<li>禁止直接输入特殊字符时，尝试使用粘贴拷贝查看是否能正常提交。</li>
+<li>word中的特殊功能，通过剪贴板拷贝到输入框，分页符，分节符类似公式的上下标等、数值的特殊符号如∑，㏒，㏑，∏，+，-等。</li>
+<li>输入负整数、负小数、分数、输入字母或汉字、小数（小数前0点舍去的情况，多个小数点的情况）、首位为0的数字如01、02、科学计数法是否支持1.0E2、全角数字与半角数字、数字与字母混合、16进制，8进制数值、货币型输入（允许小数点后面几位）、</li>
+</ul>
+</li>
+<li>安全性检查：复制粘贴输入</li>
+</ul>
+<h3 id="日期型输入框"><a href="#日期型输入框" class="headerlink" title="日期型输入框"></a>日期型输入框</h3><ul>
+<li>合法性检查：(输入0日、1日、32日)、月输入[1、3、5、7、8、10、12]、日输入[31]、月输入[4、6、9、11]、日输入[30][31]、输入非闰年，月输入[2]，日期输入[28、29]、输入闰年，月输入[2]、日期输入[29、30]、月输入[0、1、12、13]</li>
+<li>异常值、特殊字符：输入空白或NULL、输入~！@#￥%……&amp;*（）{}[]等可能导致系统错误的字符</li>
+<li>安全性检查：不能直接输入，就copy，是否数据检验出错</li>
+<li>信息重复:在一些需要命名,且名字应该唯一的信息输入重复的名字或ID,看系统有没有处理,会否报错,重名包括是否区分大小写,以及在输入内容的前后输入空格,系统是否作出正确处理</li>
+</ul>
+<h2 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a>搜索功能</h2><p>若查询条件为输入框，则参考输入框对应类型的测试方法</p>
+<h3 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h3><ul>
+<li>如果支持模糊查询，搜索名称中任意一个字符是否能搜索到</li>
+<li>比较长的名称是否能查到</li>
+<li>输入系统中不存在的与之匹配的条件</li>
+<li>用户进行查询操作时，一般情况是不进行查询条件的清空，除非需求特殊说明</li>
+</ul>
+<h3 id="组合测试"><a href="#组合测试" class="headerlink" title="组合测试"></a>组合测试</h3><ul>
+<li>不同查询条件之间来回选择，是否出现页面错误（单选框和多选框最容易出错）</li>
+<li>测试多个查询条件时，要注意查询条件的组合测试，可能不同组合的测试会报错。</li>
+</ul>
+<h2 id="添加-amp-修改功能"><a href="#添加-amp-修改功能" class="headerlink" title="添加&amp;修改功能"></a>添加&amp;修改功能</h2><h3 id="特殊键"><a href="#特殊键" class="headerlink" title="特殊键"></a>特殊键</h3><ul>
+<li>是否支持Tab键</li>
+<li>是否支持回车键</li>
+</ul>
+<h3 id="提示信息"><a href="#提示信息" class="headerlink" title="提示信息"></a>提示信息</h3><ul>
+<li>不符合要求的地方是否有错误提示</li>
+</ul>
+<h3 id="唯一性"><a href="#唯一性" class="headerlink" title="唯一性"></a>唯一性</h3><ul>
+<li>字段唯一的，是否可以重复添加，添加后是否能修改为已存在的字段（字段包括区分大小写以及在输入的内容前后输入空格，保存后，数据是否真的插入到数据库中，注意保存后数据的正确性）</li>
+</ul>
+<h3 id="数据正确性"><a href="#数据正确性" class="headerlink" title="数据正确性"></a>数据正确性</h3><ul>
+<li>对编辑页的每个编辑项进行修改，点击保存，是否可以保存成功，检查想关联的数据是否得到更新</li>
+<li>进行必填项检查（即是否给出提示以及提示后是否依然把数据存到数据库中；是否提示后出现页码错乱等）</li>
+<li>是否能够连续添加（针对特殊情况）</li>
+<li>在编辑的时候，注意编辑项的长度限制，有时在添加的时候有，在编辑的时候却没有（注意要添加和修改规则是否一致）</li>
+<li>对于有图片上传功能的编辑框，若不上传图片，查看编辑页面时是否显示有默认的图片，若上传图片，查看是否显示为上传图片</li>
+<li>修改后增加数据后，特别要注意查询页面的数据是否及时更新，特别是在首页时要注意数据的更新</li>
+<li>提交数据时，连续多次点击，查看系统会不会连续增加几条相同的数据或报错</li>
+<li>若结果列表中没有记录或者没选择某条记录，点击修改按钮，系统会抛异常</li>
+</ul>
+<h2 id="删除功能"><a href="#删除功能" class="headerlink" title="删除功能"></a>删除功能</h2><h3 id="特殊键-1"><a href="#特殊键-1" class="headerlink" title="特殊键"></a>特殊键</h3><ul>
+<li>是否支持Tab键 </li>
+<li>是否支持回车键</li>
+</ul>
+<h3 id="提示信息-1"><a href="#提示信息-1" class="headerlink" title="提示信息"></a>提示信息</h3><ul>
+<li>不选择任何信息，直接点击删除按钮，是否有提示</li>
+<li>删除某条信息时，应该有确认提示</li>
+</ul>
+<h3 id="数据实现"><a href="#数据实现" class="headerlink" title="数据实现"></a>数据实现</h3><ul>
+<li>是否能连续删除多个产品</li>
+<li>当只有一条数据时，是否可以删除成功</li>
+<li>删除一条数据后，是否可以添加相同的数据</li>
+<li>如系统支持批量删除，注意删除的信息是否正确</li>
+<li>如有全选，注意是否把所有的数据删除</li>
+<li>删除数据时，要注意相应查询页面的数据是否及时更新</li>
+<li>如删除的数据与其他业务数据关联，要注意其关联性（如删除部门信息时，部门下游员工，则应该给出提示）</li>
+<li>如果结果列表中没有记录或没有选择任何一条记录，点击删除按钮系统会报错。</li>
+</ul>
+<p>如：某一功能模块具有最基本的增删改查功能，则需要进行以下测试</p>
+<p>单项功能测试（增加、修改、查询、删除）</p>
+<p>增加——&gt;增加——&gt;增加 （连续增加测试）</p>
+<p>增加——&gt;删除</p>
+<p>增加——&gt;删除——&gt;增加 （新增加的内容与删除内容一致）</p>
+<p>增加——&gt;修改——&gt;删除</p>
+<p>修改——&gt;修改——&gt;修改 （连续修改测试）</p>
+<p>修改——&gt;增加（新增加的内容与修改前内容一致）</p>
+<p>修改——&gt;删除</p>
+<p>修改——&gt;删除——&gt;增加 （新增加的内容与删除内容一致）</p>
+<p>删除——&gt;删除——&gt;删除 （连续删除测试）</p>
+<h2 id="注册-amp-登陆模块"><a href="#注册-amp-登陆模块" class="headerlink" title="注册&amp;登陆模块"></a>注册&amp;登陆模块</h2><h3 id="注册功能"><a href="#注册功能" class="headerlink" title="注册功能"></a>注册功能</h3><ul>
+<li>注册时，设置密码为特殊版本号，检查登录时是否会报错</li>
+<li>注册成功后，页面应该以登陆状态跳转到首页或指定页面</li>
+<li>在注册信息中删除已输入的信息，检查是否可以注册成功。</li>
+</ul>
+<h3 id="登陆功能"><a href="#登陆功能" class="headerlink" title="登陆功能"></a>登陆功能</h3><ul>
+<li>输入正确的用户名和正确的密码</li>
+<li>输入正确的用户名和错误的密码</li>
+<li>输入错误的用户名和正确的密码</li>
+<li>输入错误的用户名和错误的密码</li>
+<li>不输入用户名和密码（均为空格）</li>
+<li>只输入用户名，密码为空</li>
+<li>用户名为空，只输入密码</li>
+<li>输入正确的用户名和密码，但是不区分大小写</li>
+<li>用户名和密码包括特殊字符</li>
+<li>用户名和密码输入超长值</li>
+<li>已删除的用户名和密码</li>
+<li>登录时，当页面刷新或重新输入数据时，验证码是否更新</li>
+</ul>
+<h2 id="上传图片测试"><a href="#上传图片测试" class="headerlink" title="上传图片测试"></a>上传图片测试</h2><h3 id="功能实现-1"><a href="#功能实现-1" class="headerlink" title="功能实现"></a>功能实现</h3><ul>
+<li>文件类型正确、大小合适</li>
+<li>文件类型正确，大小不合适</li>
+<li>文件类型错误，大小合适</li>
+<li>文件类型和大小都合适，上传一个正在使用中的图片</li>
+<li>文件类型大小都合适，手动输入存在的图片地址来上传</li>
+<li>文件类型和大小都合适，输入不存在的图片地址来上传</li>
+<li>文件类型和大小都合适，输入图片名称来上传</li>
+<li>不选择文件直接点击上传，查看是否给出提示</li>
+<li>连续多次选择不同的文件，查看是否上传最后一次选择的文件</li>
+</ul>
+<h2 id="查询结果列表"><a href="#查询结果列表" class="headerlink" title="查询结果列表"></a>查询结果列表</h2><h3 id="功能实现-2"><a href="#功能实现-2" class="headerlink" title="功能实现"></a>功能实现</h3><ul>
+<li>列表、列宽是否合理</li>
+<li>列表数据太宽有没有提供横向滚动</li>
+<li>列表的列名有没有与内容对应</li>
+<li>列表的每列的列名是否描述的清晰</li>
+<li>列表是否把不必要的列都显示出来</li>
+<li>点击某列进行排序，是否会报错（点击查看每一页的排序是否正确）</li>
+<li>双击或单击某列信息，是否会报错</li>
+</ul>
+<h2 id="返回键检查"><a href="#返回键检查" class="headerlink" title="返回键检查"></a>返回键检查</h2><ul>
+<li>一条已经成功提交的记录，返回后再提交，是否做了处理</li>
+<li>检查多次使用返回键的情况，在有返回键的地方，返回到原来的页面多次，查看是否会出错</li>
+</ul>
+<h2 id="回车键检查"><a href="#回车键检查" class="headerlink" title="回车键检查"></a>回车键检查</h2><ul>
+<li>在输入结果后，直接按回车键，看系统如何处理，是否会报错</li>
+</ul>
+<h2 id="刷新键检查"><a href="#刷新键检查" class="headerlink" title="刷新键检查"></a>刷新键检查</h2><ul>
+<li>在Web系统中，使用刷新键，看系统如何处理，是否会报错</li>
+</ul>
+<h2 id="直接URL链接检查"><a href="#直接URL链接检查" class="headerlink" title="直接URL链接检查"></a>直接URL链接检查</h2><ul>
+<li>在Web系统中，在地址栏直接输入各个功能页面的URL地址，看系统如何处理，是否能够直接链接查看（匿名查看），是否有权限控制，是否直接执行，并返回相应结果页</li>
+</ul>
+<h2 id="界面和易用性测试"><a href="#界面和易用性测试" class="headerlink" title="界面和易用性测试"></a>界面和易用性测试</h2><ul>
+<li>风格、样式、颜色是否协调</li>
+<li>界面布局是否整齐、协调（保证全部显示出来的，尽量不要使用滚动条）</li>
+<li>界面操作、标题描述是否恰当（描述有歧义、注意是否有错别字）</li>
+<li>操作是否符合人们的常规习惯（有没有把相似的功能的控件放在一起，方便操作）</li>
+<li>提示界面是否符合规范（不应该显示英文的cancel、ok，应该显示中文的确定等）</li>
+<li>界面中各个控件是否对齐</li>
+<li>日期控件是否可编辑</li>
+<li>日期控件的长度是否合理，以修改时可以把时间全部显示出来为准</li>
+<li>查询结果列表列宽是否合理、标签描述是否合理</li>
+<li>查询结果列表太宽没有横向滚动提示</li>
+<li>对于信息比较长的文本，文本框有没有提供自动竖直滚动条</li>
+<li>数据录入控件是否方便</li>
+<li>有没有支持Tab键，键的顺序要有条理，不乱跳</li>
+<li>有没有提供相关的热键</li>
+<li>控件的提示语描述是否正确</li>
+<li>模块调用是否统一，相同的模块是否调用同一个界面</li>
+<li>用滚动条移动页面时，页面的控件是否显示正常</li>
+<li>日期的正确格式应该是XXXX-XX-XX或XXXX-XX-XX XX:XX:XX</li>
+<li>页面是否有多余按钮或标签</li>
+<li>窗口标题或图标是否与菜单栏的统一</li>
+<li>窗口的最大化、最小化是否能正确切换</li>
+<li>对于正常的功能，用户可以不必阅读用户手册就能使用</li>
+<li>执行风险操作时，有确认、删除等提示吗</li>
+<li>操作顺序是否合理</li>
+<li>正确性检查：检查页面上的form, button, table, header, footer,提示信息，还有其他文字拼写，句子的语法等是否正确。</li>
+<li>系统应该在用户执行错误的操作之前提出警告，提示信息.</li>
+<li>页面分辨率检查，在各种分辨率浏览系统检查系统界面友好性。</li>
+<li>合理性检查：做delete, update, add, cancel, back等操作后，查看信息回到的页面是否合理。</li>
+<li>检查本地化是否通过：英文版不应该有中文信息，英文翻译准确，专业。</li>
+</ul>
+<h2 id="兼容性测试"><a href="#兼容性测试" class="headerlink" title="兼容性测试"></a>兼容性测试</h2><ul>
+<li>兼容性测试不只是指界面在不同操作系统或浏览器下的兼容，有些功能方面的测试，也要考虑到兼容性，包括操作系统兼容和应用软件兼容，可能还包括硬件兼容。比如涉及到ajax、jquery、javascript等技术的，都要考虑到不同浏览器下的兼容性问题</li>
+</ul>
+<h2 id="链接测试"><a href="#链接测试" class="headerlink" title="链接测试"></a>链接测试</h2><ul>
+<li>主要是保证链接的可用性和正确性，它也是网站测试中比较重要的一个方面。可以使用特定的工具如XENU来进行链接测试。</li>
+</ul>
+<h3 id="导航测试"><a href="#导航测试" class="headerlink" title="导航测试"></a>导航测试</h3><p>导航描述了用户在一个页面内操作的方式，在不同的用户接口控制之间，例如按钮、对话框、列表和窗口等；或在不同的连接页面之间。通过考虑下列问题，可以决定一个Web应用系统是否易于导航：导航是否直观？Web系统的主要部分是否可通过主页存取？Web系统是否需要站点地图、搜索引擎或其他的导航帮助？<br>在一个页面上放太多的信息往往起到与预期相反的效果。Web应用系统的用户趋向于目的驱动，很快地扫描一个Web应用系统，看是否有满足自己需要的信息，如果没有，就会很快地离开。很少有用户愿意花时间去熟悉Web应用系统的结构，因此，Web应用系统导航帮助要尽可能地准确。<br>导航的另一个重要方面是Web应用系统的页面结构、导航、菜单、连接的风格是否一致。确保用户凭直觉就知道Web应用系统里面是否还有内容，内容在什么地方。<br>Web应用系统的层次一旦决定，就要着手测试用户导航功能，让最终用户参与这种测试，效果将更加明显。</p>
+<h3 id="图形测试"><a href="#图形测试" class="headerlink" title="图形测试"></a>图形测试</h3><p>在Web应用系统中，适当的图片和动画既能起到广告宣传的作用，又能起到美化页面的功能。一个Web应用系统的图形可以包括图片、动画、边框、颜色、字体、背景、按钮等。图形测试的内容有：</p>
+<ul>
+<li>要确保图形有明确的用途，图片或动画不要胡乱地堆在一起，以免浪费传输时间。Web应用系统的图片尺寸要尽量地小，并且要能清楚地说明某件事情，一般都链接到某个具体的页面。</li>
+<li>验证所有页面字体的风格是否一致。</li>
+<li>背景颜色应该与字体颜色和前景颜色相搭配。</li>
+<li>图片的大小和质量也是一个很重要的因素，一般采用JPG或GIF压缩，最好能使图片的大小减小到30k以下</li>
+<li>最后，需要验证的是文字回绕是否正确。如果说明文字指向右边的图片，应该确保该图片出现在右边。不要因为使用图片而使窗口和段落排列古怪或者出现孤行。</li>
+</ul>
+<p>通常来说，使用少许或尽量不使用背景是个不错的选择。如果您想用背景，那么最好使用单色的，和导航条一起放在页面的左边。另外，图案和图片可能会转移用户的注意力。</p>
+<h2 id="业务流程测试"><a href="#业务流程测试" class="headerlink" title="业务流程测试"></a>业务流程测试</h2><ul>
+<li>业务流程，一般会涉及到多个模块的数据，所以在对业务流程测试时，首先要保证单个模块功能的正确性，其次就要对各个模块间传递的数据进行测试，这往往是容易出现问题的地方，测试时一定要设计不同的数据进行测试。</li>
+</ul>
+<h2 id="安全性测试"><a href="#安全性测试" class="headerlink" title="安全性测试"></a>安全性测试</h2><ul>
+<li>SQL注入（比如登陆页面）</li>
+<li>XSS跨网站脚本攻击：程序或数据库没有对一些特殊字符进行过滤或处理，导致用户所输入的一些破坏性的脚本语句能够直接写进数据库中，浏览器会直接执行这些脚本语句，破坏网站的正常显示，或网站用户的信息被盗,构造脚本语句时，要保证脚本的完整性。</li>
+</ul>
+<p>　　document.write(“abc”)</p>
+<p>　　\<script>alter(“abc”)\</script></p>
+<ul>
+<li>URL地址后面随便输入一些符号，并尽量是动态参数靠后</li>
+<li>验证码更新问题</li>
+<li>现在的Web应用系统基本采用先注册，后登陆的方式。因此，必须测试有效和无效的用户名和密码，要注意到是否大小写敏感，可以试多少次的限制，是否可以不登陆而直接浏览某个页面等。</li>
+<li>Web应用系统是否有超时的限制，也就是说，用户登陆后在一定时间内（例如15分钟）没有点击任何页面，是否需要重新登陆才能正常使用。</li>
+<li>为了保证Web应用系统的安全性，日志文件是至关重要的。需要测试相关信息是否写进了日志文件、是否可追踪。</li>
+<li>当使用了安全套接字时，还要测试加密是否正确，检查信息的完整性。</li>
+<li>服务器端的脚本常常构成安全漏洞，这些漏洞又常常被黑客利用。所以，还要测试没有经过授权，就不能在服务器端放置和编辑脚本的问题。</li>
+</ul>
+<h2 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h2><h3 id="连接速度测试"><a href="#连接速度测试" class="headerlink" title="连接速度测试"></a>连接速度测试</h3><p>用户连接到Web应用系统的速度根据上网方式的变化而变化，他们或许是电话拨号，或是宽带上网。当下载一个程序时，用户可以等较长的时间，但如果仅仅访问一个页面就不会这样。如果Web系统响应时间太长（例如超过5秒钟），用户就会因没有耐心等待而离开。</p>
+<p>另外，有些页面有超时的限制，如果响应速度太慢，用户可能还没来得及浏览内容，就需要重新登陆了。而且，连接速度太慢，还可能引起数据丢失，使用户得不到真实的页面。</p>
+<h3 id="负载测试"><a href="#负载测试" class="headerlink" title="负载测试"></a>负载测试</h3><p>负载测试是为了测量Web系统在某一负载级别上的性能，以保证Web系统在需求范围内能正常工作。负载级别可以是某个时刻同时访问Web系统的用户数量，也可以是在线数据处理的数量。例如：Web应用系统能允许多少个用户同时在线？如果超过了这个数量，会出现什么现象？Web应用系统能否处理大量用户对同一个页面的请求？</p>
+<h3 id="压力测试"><a href="#压力测试" class="headerlink" title="压力测试"></a>压力测试</h3><p>负载测试应该安排在Web系统发布以后，在实际的网络环境中进行测试。因为一个企业内部员工，特别是项目组人员总是有限的，而一个Web系统能同时处理的请求数量将远远超出这个限度，所以，只有放在Internet上，接受负载测试，其结果才是正确可信的。<br>进行压力测试是指实际破坏一个Web应用系统，测试系统的反映。压力测试是测试系统的限制和故障恢复能力，也就是测试Web应用系统会不会崩溃，在什么情况下会崩溃。黑客常常提供错误的数据负载，直到Web应用系统崩溃，接着当系统重新启动时获得存取权。<br>压力测试的区域包括表单、登陆和其他信息传输页面等。</p>
+<h4 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h4><p>(负载/压力测试应该关注什么)</p>
+<p>测试需要验证系统能否在同一时间响应大量的用户，在用户传送大量数据的时候能否响应，系统能否长时间运行。可访问性对用户来说是极其重要的。如果用户得到“系统忙”的信息，他们可能放弃，并转向竞争对手。系统检测不仅要使用户能够正常访问站点，在很多情况下，可能会有黑客试图通过发送大量数据包来攻击服务器。出于安全的原因，测试人员应该知道当系统过载时，需要采取哪些措施，而不是简单地提升系统性能。</p>
+<ul>
+<li>瞬间访问高峰</li>
+</ul>
+<p>如果您的站点用于公布彩票的抽奖结果，最好使系统在中奖号码公布后的一段时间内能够响应上百万的请求。负载测试工具能够模拟X个用户同时访问测试站点。</p>
+<ul>
+<li>每个用户传送大量数据</li>
+</ul>
+<p>网上书店的多数用户可能只订购1-5书，但是大学书店可能会订购5000本有关心理学介绍的课本?或者一个祖母为她的50个儿孙购买圣诞礼物(当然每个孩子都有自己的邮件地址)系统能处理单个用户的大量数据吗?</p>
+<ul>
+<li>长时间的使用</li>
+</ul>
+<p>如果站点用于处理鲜花订单，那么至少希望它在母亲节前的一周内能持续运行。如果站点提供基于web的email服务，那么点最好能持续运行几个月，甚至几年。可能需要使用自动测试工具来完成这种类型的测试，因为很难通过手工完成这些测试。你可以想象组织100个人同时点击某个站点。但是同时组织100000个人呢。通常，测试工具在第二次使用的时候，它创造的效益，就足以支付成本。而且，测试工具安装完成之后，再次使用的时候，只要点击几下。<br>采取措施：采用性能测试工具WAS、ACT，LR等协助进行测试</p>
+<h2 id="测试中应该注意的其他情况"><a href="#测试中应该注意的其他情况" class="headerlink" title="测试中应该注意的其他情况"></a>测试中应该注意的其他情况</h2><ul>
+<li>在测试时，与网络有关的步骤或者模块必须考虑到断网的情况</li>
+</ul>
+<ul>
+<li>每个页面都有相应的Title，不能为空，或者显示“无标题页”</li>
+</ul>
+<ul>
+<li>在测试的时候要考虑到页面出现滚动条时，滚动条上下滚动时，页面是否正常</li>
+</ul>
+<ul>
+<li>URL不区分大小写，大小写不敏感</li>
+</ul>
+<ul>
+<li>对于电子商务网站，当用户并发购买数量大于库存的数量时，系统如何处理</li>
+</ul>
+<ul>
+<li>测试数据避免单纯输入“123”、“abc“之类的，让测试数据尽量接近实际</li>
+</ul>
+<ul>
+<li>进行测试时，尽量不要用超级管理员进行测试，用新建的用户进行测试。测试人员尽量不要使用同一个用户进行测试</li>
+</ul>
+<ul>
+<li>提示信息：提示信息是否完整、正确、详细</li>
+</ul>
+<ul>
+<li>帮助信息：是否提供帮助信息，帮助信息的表现形式（页面文字、提示信息、帮助文件），帮助信息是否正确、详细</li>
+</ul>
+<ul>
+<li>可扩展性：是否由升级的余地，是否保留了接口</li>
+</ul>
+<ul>
+<li>稳定性：运行所需的软硬件配置，占用资源情况，出现问题时的容错性，对数据的保护</li>
+</ul>
+<ul>
+<li>运行速度：运行的快慢，带宽占用情况</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/test/" rel="tag"><i class="fa fa-tag"></i> test</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/pip使用手册/" rel="next" title="pip使用手册">
+                <i class="fa fa-chevron-left"></i> pip使用手册
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/Linux安装pyenv/" rel="prev" title="Linux安装pyenv">
+                Linux安装pyenv <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Charlie" />
+            
+              <p class="site-author-name" itemprop="name">Charlie</p>
+              <p class="site-description motion-element" itemprop="description">游戏人生，何须读档</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    <span class="site-state-item-count">32</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#输入框"><span class="nav-number">1.</span> <span class="nav-text">输入框</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符型输入框"><span class="nav-number">1.1.</span> <span class="nav-text">字符型输入框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数值型输入框"><span class="nav-number">1.2.</span> <span class="nav-text">数值型输入框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#日期型输入框"><span class="nav-number">1.3.</span> <span class="nav-text">日期型输入框</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搜索功能"><span class="nav-number">2.</span> <span class="nav-text">搜索功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#功能实现"><span class="nav-number">2.1.</span> <span class="nav-text">功能实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合测试"><span class="nav-number">2.2.</span> <span class="nav-text">组合测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加-amp-修改功能"><span class="nav-number">3.</span> <span class="nav-text">添加&修改功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊键"><span class="nav-number">3.1.</span> <span class="nav-text">特殊键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提示信息"><span class="nav-number">3.2.</span> <span class="nav-text">提示信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#唯一性"><span class="nav-number">3.3.</span> <span class="nav-text">唯一性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据正确性"><span class="nav-number">3.4.</span> <span class="nav-text">数据正确性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除功能"><span class="nav-number">4.</span> <span class="nav-text">删除功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊键-1"><span class="nav-number">4.1.</span> <span class="nav-text">特殊键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提示信息-1"><span class="nav-number">4.2.</span> <span class="nav-text">提示信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据实现"><span class="nav-number">4.3.</span> <span class="nav-text">数据实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册-amp-登陆模块"><span class="nav-number">5.</span> <span class="nav-text">注册&登陆模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册功能"><span class="nav-number">5.1.</span> <span class="nav-text">注册功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#登陆功能"><span class="nav-number">5.2.</span> <span class="nav-text">登陆功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上传图片测试"><span class="nav-number">6.</span> <span class="nav-text">上传图片测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#功能实现-1"><span class="nav-number">6.1.</span> <span class="nav-text">功能实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询结果列表"><span class="nav-number">7.</span> <span class="nav-text">查询结果列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#功能实现-2"><span class="nav-number">7.1.</span> <span class="nav-text">功能实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#返回键检查"><span class="nav-number">8.</span> <span class="nav-text">返回键检查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回车键检查"><span class="nav-number">9.</span> <span class="nav-text">回车键检查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#刷新键检查"><span class="nav-number">10.</span> <span class="nav-text">刷新键检查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#直接URL链接检查"><span class="nav-number">11.</span> <span class="nav-text">直接URL链接检查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#界面和易用性测试"><span class="nav-number">12.</span> <span class="nav-text">界面和易用性测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#兼容性测试"><span class="nav-number">13.</span> <span class="nav-text">兼容性测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接测试"><span class="nav-number">14.</span> <span class="nav-text">链接测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#导航测试"><span class="nav-number">14.1.</span> <span class="nav-text">导航测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图形测试"><span class="nav-number">14.2.</span> <span class="nav-text">图形测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#业务流程测试"><span class="nav-number">15.</span> <span class="nav-text">业务流程测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全性测试"><span class="nav-number">16.</span> <span class="nav-text">安全性测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性能测试"><span class="nav-number">17.</span> <span class="nav-text">性能测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#连接速度测试"><span class="nav-number">17.1.</span> <span class="nav-text">连接速度测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载测试"><span class="nav-number">17.2.</span> <span class="nav-text">负载测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#压力测试"><span class="nav-number">17.3.</span> <span class="nav-text">压力测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#备注"><span class="nav-number">17.3.1.</span> <span class="nav-text">备注</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试中应该注意的其他情况"><span class="nav-number">18.</span> <span class="nav-text">测试中应该注意的其他情况</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Charlie</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">94k</span>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+
+  
+<div id="hexo-helper-live2d">
+  <canvas id="live2dcanvas" width="150" height="300"></canvas>
+</div>
+<style>
+  #live2dcanvas{
+    position: fixed;
+    width: 150px;
+    height: 300px;
+    opacity:0.7;
+    right: 0px;
+    z-index: 999;
+    pointer-events: none;
+    bottom: -20px;
+  }
+</style>
+<script type="text/javascript" src="/live2d/device.min.js"></script>
+<script type="text/javascript">
+const loadScript = function loadScript(c,b){var a=document.createElement("script");a.type="text/javascript";"undefined"!=typeof b&&(a.readyState?a.onreadystatechange=function(){if("loaded"==a.readyState||"complete"==a.readyState)a.onreadystatechange=null,b()}:a.onload=function(){b()});a.src=c;document.body.appendChild(a)};
+(function(){
+  if((typeof(device) != 'undefined') && (device.mobile())){
+    document.getElementById("live2dcanvas").style.width = '75px';
+    document.getElementById("live2dcanvas").style.height = '150px';
+  }else
+    if (typeof(device) === 'undefined') console.error('Cannot find current-device script.');
+  loadScript("/live2d/script.js", function(){loadlive2d("live2dcanvas", "/live2d/assets/tororo.model.json", 0.5);});
+})();
+</script>
+
+  
+</body>
+</html>

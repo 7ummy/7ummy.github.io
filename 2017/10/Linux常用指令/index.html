@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT, 测试, 博客, Linux, Py" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="游戏人生，何须读档">
+<meta name="keywords" content="Hexo, NexT, 测试, 博客, Linux, Py">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https://charlie17.xyz/categories/index.html">
+<meta property="og:site_name" content="PEANUTS">
+<meta property="og:description" content="游戏人生，何须读档">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-09T03:22:05.807Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="categories">
+<meta name="twitter:description" content="游戏人生，何须读档">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    fastclick: true,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"fadeIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://charlie17.xyz/categories/"/>
+
+
+
+
+
+	<script>
+	(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/46de47d1.js","daovoice")
+	daovoice('init', {
+	  app_id: "46de47d1"
+	});
+	daovoice('update');
+	</script>
+
+
+  <title>Linux常用指令 | PEANUTS</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">PEANUTS</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">好的艺术家复制作品，伟大的艺术家窃取灵感。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+
+            
+              
+                首页
+              
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+
+            
+              
+                归档
+                <span class="badge">29</span>
+              
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+
+            
+              
+                标签
+                <span class="badge">6</span>
+              
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+
+            
+              
+                关于
+              
+            
+
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://charlie17.xyz/2017/10/Linux常用指令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Charlie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PEANUTS">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Linux常用指令</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-17T20:53:43+08:00">2017-10-17</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/运维/" itemprop="url" rel="index">
+                    <span itemprop="name">运维</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/运维/指令/" itemprop="url" rel="index">
+                    <span itemprop="name">指令</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-fire">&nbsp&nbsp热度</i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>℃
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">0:04</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="常用终端快捷键"><a href="#常用终端快捷键" class="headerlink" title="常用终端快捷键"></a>常用终端快捷键</h2><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>快捷键组合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>打开新的终端窗口</td>
+<td>Ctrl Shift n</td>
+</tr>
+<tr>
+<td>打开新的终端标签</td>
+<td>Ctrl Shift t</td>
+</tr>
+<tr>
+<td>切换到第n个终端标签</td>
+<td>Alt n</td>
+</tr>
+<tr>
+<td>清屏</td>
+<td>Ctrl l</td>
+</tr>
+<tr>
+<td>相当于exit</td>
+<td>Ctrl d</td>
+</tr>
+<tr>
+<td>剪切光标到命令提示符之间的所有字符</td>
+<td>Ctrl u</td>
+</tr>
+<tr>
+<td>暂停应用程序  再输入fg - 重新将程序唤到前台</td>
+<td>Ctrl z</td>
+</tr>
+<tr>
+<td>剪切光标至行末的内容</td>
+<td>CTRL + K</td>
+</tr>
+<tr>
+<td>粘贴</td>
+<td>CTRL + Y</td>
+</tr>
+<tr>
+<td>移动光标到行末</td>
+<td>CTRL + E</td>
+</tr>
+<tr>
+<td>移动光标到行首</td>
+<td>CTRL + A</td>
+</tr>
+<tr>
+<td>跳向下一个空格</td>
+<td>ALT + F</td>
+</tr>
+<tr>
+<td>跳回上一个空格</td>
+<td>ALT + B</td>
+</tr>
+<tr>
+<td>删除前一个单词</td>
+<td>ALT + Backspace</td>
+</tr>
+<tr>
+<td>剪切光标前一个单词</td>
+<td>CTRL + W</td>
+</tr>
+<tr>
+<td>向终端内粘贴文本</td>
+<td>Shift + Insert</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><h3 id="绝对路径和相对路径"><a href="#绝对路径和相对路径" class="headerlink" title="绝对路径和相对路径"></a>绝对路径和相对路径</h3><ul>
+<li>绝对路径：从根目录开始的路径，一定以 / 开头 </li>
+<li>相对路径：从当前目录开始的路径，一定不以 / 开头，而可以以 .. , . 开头，其中 .. 代表当前目录的上一层目录， . 代表当前目录。</li>
+</ul>
+<h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><p>查看目录下的文件 - list directory contents</p>
+<p>选项：</p>
+<ul>
+<li>显示详细文件格式 -l </li>
+<li>显示全部文件（包含隐藏文件） -a </li>
+<li>照最后修改的日期倒序排列 -t </li>
+</ul>
+<p>选项可以合并使用，例：ls -la、ll</p>
+<p>对于命令的帮助查询 man 或者 –help<br>输入 man ls （需要再输入q去结束）<br>或者 ls –help </p>
+<p>一般情况下选项中</p>
+<p>-f (–force)强制<br>-r (–recursive)递归</p>
+<h3 id="manual-page"><a href="#manual-page" class="headerlink" title="manual_page"></a>manual_page</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>向 下 翻 一 页</td>
+<td>空格</td>
+</tr>
+<tr>
+<td>向 下 翻 一 页</td>
+<td>[Page Down]</td>
+</tr>
+<tr>
+<td>向 上 翻 一 页</td>
+<td>[Page Up]</td>
+</tr>
+<tr>
+<td>回到首页</td>
+<td>[Home]</td>
+</tr>
+<tr>
+<td>跳转到最末页</td>
+<td>[End]</td>
+</tr>
+<tr>
+<td>向“ 下” 搜 寻 string 这 个 字符 串</td>
+<td>/string</td>
+</tr>
+<tr>
+<td>向“ 下” 搜 寻</td>
+<td>n</td>
+</tr>
+<tr>
+<td>向“ 上” 搜 寻</td>
+<td>N</td>
+</tr>
+<tr>
+<td>结 束 这 次 的 man page</td>
+<td>q</td>
+</tr>
+</tbody>
+</table>
+<h3 id="useradd"><a href="#useradd" class="headerlink" title="useradd"></a>useradd</h3><p>useradd命令用于Linux中创建的新的系统用户。useradd可用来建立用户帐号。帐号建好之后，再用passwd设定帐号的密码．而可用userdel删除帐号。使用useradd指令所建立的帐号，实际上是保存在<code>/etc/passwd</code>文本文件中。 </p>
+<p><strong>选项</strong></p>
+<p>-c&lt;备注&gt;：加上备注文字。备注文字会保存在passwd的备注栏位中；</p>
+<p>-d&lt;登入目录&gt;：指定用户登入时的启始目录；</p>
+<p>-D：变更预设值； </p>
+<p>-e&lt;有效期限&gt;：指定帐号的有效期限； </p>
+<p>-f&lt;缓冲天数&gt;：指定在密码过期后多少天即关闭该帐号；</p>
+<p>-g&lt;群组&gt;：指定用户所属的群组； </p>
+<p>-G&lt;群组&gt;：指定用户所属的附加群组；</p>
+<p>-m：自动建立用户的登入目录； </p>
+<p>-M：不要自动建立用户的登入目录； </p>
+<p>-n：取消建立以用户名称为名的群组； </p>
+<p>-r：建立系统帐号； </p>
+<p>-s：指定用户登入后所使用的shell；</p>
+<p>-u：指定用户id。</p>
+<h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>指令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查看当前目录的绝对路径(print name of current/working directory)</td>
+<td>pwd</td>
+</tr>
+<tr>
+<td>切换当前工作目录(Change  the  current directory to dir)</td>
+<td>cd</td>
+</tr>
+<tr>
+<td>创建目录(make directories)</td>
+<td>mkdir</td>
+</tr>
+<tr>
+<td>创建文件或者更新文件(change file timestamps)</td>
+<td>touch</td>
+</tr>
+<tr>
+<td>复制文件和目录(copy files and directories)</td>
+<td>cp</td>
+</tr>
+<tr>
+<td>删除文件或目录(remove files or directories)</td>
+<td>rm</td>
+</tr>
+<tr>
+<td>移动文件或重命名文件(move or rename files)</td>
+<td>mv</td>
+</tr>
+<tr>
+<td>查看文件并打印到标准输出(concatenate files and print on the standard output)</td>
+<td>cat</td>
+</tr>
+<tr>
+<td>从最后一行开始查看到第一行(concatenate and print files in reverse)</td>
+<td>tac</td>
+</tr>
+<tr>
+<td>输出文件的第一部分(默认前10行)(output the first part of files)</td>
+<td>head</td>
+</tr>
+<tr>
+<td>输出文件的最后部分(默认后10行)(output the last part of files)</td>
+<td>tail</td>
+</tr>
+<tr>
+<td>持续输出文件的最后部分</td>
+<td>tail -f</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Linux管道"><a href="#Linux管道" class="headerlink" title="Linux管道"></a>Linux管道</h3><p>将一个命令的标准输出作为另一个命令的标准输入。也就是把几个命令组合起来使用，后一个命令除以前一个命令的结果。</p>
+<p>例：grep -r “close” /home/* | more       在home目录下所有文件中查找，包括close的文件，并分页输出。</p>
+<h3 id="打包压缩相关命令"><a href="#打包压缩相关命令" class="headerlink" title="打包压缩相关命令"></a>打包压缩相关命令</h3><p>tar:                打包压缩</p>
+<p>​     -c              归档文件</p>
+<p>​     -x              压缩文件</p>
+<p>​     -z              gzip压缩文件</p>
+<p>​     -j              bzip2压缩文件</p>
+<p>​     -v              显示压缩或解压缩过程 v(view)</p>
+<p>​     -f              使用档名</p>
+<p>例：</p>
+<p>tar -cvf /home/abc.tar /home/abc              只打包，不压缩</p>
+<p>tar -zcvf /home/abc.tar.gz /home/abc        打包，并用gzip压缩</p>
+<p>tar -jcvf /home/abc.tar.bz2 /home/abc      打包，并用bzip2压缩</p>
+<p>当然，如果想解压缩，就直接替换上面的命令tar -cvf、tar -zcvf、tar -jcvf 中的“c” 换成“x” 就可以了。</p>
+<h3 id="文件权限管理"><a href="#文件权限管理" class="headerlink" title="文件权限管理"></a>文件权限管理</h3><p>三种基本权限</p>
+<p>R           读         数值表示为4</p>
+<p>W          写         数值表示为2</p>
+<p>X           可执行  数值表示为1</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+<th>r</th>
+<th>w</th>
+<th>x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文件</td>
+<td>实际含有数据的地方</td>
+<td>读到文件内容</td>
+<td>修改文件内容</td>
+<td>执行文件内容</td>
+</tr>
+<tr>
+<td>目录</td>
+<td>记录文件名</td>
+<td>读到文件名</td>
+<td>修改文件名</td>
+<td>进入该目录的权限</td>
+</tr>
+</tbody>
+</table>
+<p>-rwxrw-r–一共十个字符，分成四段。</p>
+<p>第一个字符“-”表示普通文件；这个位置还可能会出现“l”链接；“d”表示目录</p>
+<p>第二三四个字符“rwx”表示当前所属用户的权限。</p>
+<p>第五六七个字符“rw-”表示当前所属组的权限。</p>
+<p>第八九十个字符“r–”表示其他用户权限。</p>
+<p>chmod 744 jdk-7u21-linux-i586.tar.gz</p>
+<h3 id="vim使用"><a href="#vim使用" class="headerlink" title="vim使用"></a>vim使用</h3><p>vim三种模式：命令模式、插入模式、编辑模式。使用ESC或i或：来切换模式。</p>
+<p>命令模式下：</p>
+<p>:q                      退出</p>
+<p>:q!                     强制退出</p>
+<p>:wq                   保存并退出</p>
+<p>:set nu     显示行号</p>
+<p>:set nonu  隐藏行号</p>
+<p>/seach            在文档中查找seach 按n跳到下一个，shift+n上一个</p>
+<p>yyp                   复制光标所在行，并粘贴</p>
+<p>h(左移一个字符←)、j(下一行↓)、k(上一行↑)、l(右移一个字符→)</p>
+<ul>
+<li>一般指令模式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl+f</td>
+<td>向上翻页</td>
+</tr>
+<tr>
+<td>Ctrl+b</td>
+<td>向下翻页</td>
+</tr>
+<tr>
+<td>0或home键</td>
+<td>光标移至行首</td>
+</tr>
+<tr>
+<td>$或END键</td>
+<td>光标移至行末</td>
+</tr>
+<tr>
+<td>G</td>
+<td>文章最末。n+G为移至n行，n为数字</td>
+</tr>
+<tr>
+<td>gg</td>
+<td>移到这个文件的第一列</td>
+</tr>
+<tr>
+<td>n+\<enter></enter></td>
+<td>n为数字。光标向下移动n列(注：不是移动至n行)</td>
+</tr>
+<tr>
+<td>/word</td>
+<td>向光标之下寻找一个名称为word的字符</td>
+</tr>
+<tr>
+<td>:1,$s/word1/word2/gc</td>
+<td>从第一列到最末页查找word1字符并替换为word2,并提示是否(confirm)确认取代</td>
+</tr>
+<tr>
+<td>x,X</td>
+<td>x为向后删一个字符,X为向前删一个字符</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>删除光标所在的那一整列</td>
+</tr>
+<tr>
+<td>ndd</td>
+<td>n为数字。删除光标所在的向下的n列。(所在行为第一行)</td>
+</tr>
+<tr>
+<td>yy</td>
+<td>复制光标所在的一整列</td>
+</tr>
+<tr>
+<td>nyy</td>
+<td>n为数字。复制光标所在的向下的n列。</td>
+</tr>
+<tr>
+<td>p,P</td>
+<td>p粘贴在光标下一列。P粘贴在光标上一列。</td>
+</tr>
+<tr>
+<td>u</td>
+<td>复原前一个动作。</td>
+</tr>
+<tr>
+<td>[Ctrl]+r</td>
+<td>重做上一个动作。</td>
+</tr>
+<tr>
+<td>.</td>
+<td>重复前一个动作。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>切换至编辑模式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>i，I</td>
+<td>i-在光标处插入，I-在光标所在列第一个非空白字符处开始插入</td>
+</tr>
+<tr>
+<td>a，A</td>
+<td>a-在光标下个字符处插入，A-在光标所在列最后一个字符处插入</td>
+</tr>
+<tr>
+<td>o，O</td>
+<td>o-在光标下一列插入，O-在光标上一列插入</td>
+</tr>
+<tr>
+<td>r，R</td>
+<td>r-取代光标处字符一次，R-一直取代光标所在字符处，直到按下EXC为止</td>
+</tr>
+</tbody>
+</table>
+<p>按Esc回到一般命令模式</p>
+<ul>
+<li>切换至命令行模式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:w</td>
+<td>将编辑的内容写入文件</td>
+</tr>
+<tr>
+<td>:q</td>
+<td>退出vi</td>
+</tr>
+<tr>
+<td>:wq</td>
+<td>保存并退出</td>
+</tr>
+<tr>
+<td>:set nu</td>
+<td>显示行号</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/Linux安装Superset/" rel="next" title="Linux安装Superset">
+                <i class="fa fa-chevron-left"></i> Linux安装Superset
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/Linux安装Tomcat/" rel="prev" title="Linux安装Tomcat">
+                Linux安装Tomcat <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Charlie" />
+            
+              <p class="site-author-name" itemprop="name">Charlie</p>
+              <p class="site-description motion-element" itemprop="description">游戏人生，何须读档</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    <span class="site-state-item-count">32</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用终端快捷键"><span class="nav-number">1.</span> <span class="nav-text">常用终端快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用操作"><span class="nav-number">2.</span> <span class="nav-text">常用操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#绝对路径和相对路径"><span class="nav-number">2.1.</span> <span class="nav-text">绝对路径和相对路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ls"><span class="nav-number">2.2.</span> <span class="nav-text">ls</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#manual-page"><span class="nav-number">2.3.</span> <span class="nav-text">manual_page</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#useradd"><span class="nav-number">2.4.</span> <span class="nav-text">useradd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用指令"><span class="nav-number">2.5.</span> <span class="nav-text">常用指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux管道"><span class="nav-number">2.6.</span> <span class="nav-text">Linux管道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打包压缩相关命令"><span class="nav-number">2.7.</span> <span class="nav-text">打包压缩相关命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件权限管理"><span class="nav-number">2.8.</span> <span class="nav-text">文件权限管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim使用"><span class="nav-number">2.9.</span> <span class="nav-text">vim使用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Charlie</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">94k</span>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+
+  
+<div id="hexo-helper-live2d">
+  <canvas id="live2dcanvas" width="150" height="300"></canvas>
+</div>
+<style>
+  #live2dcanvas{
+    position: fixed;
+    width: 150px;
+    height: 300px;
+    opacity:0.7;
+    right: 0px;
+    z-index: 999;
+    pointer-events: none;
+    bottom: -20px;
+  }
+</style>
+<script type="text/javascript" src="/live2d/device.min.js"></script>
+<script type="text/javascript">
+const loadScript = function loadScript(c,b){var a=document.createElement("script");a.type="text/javascript";"undefined"!=typeof b&&(a.readyState?a.onreadystatechange=function(){if("loaded"==a.readyState||"complete"==a.readyState)a.onreadystatechange=null,b()}:a.onload=function(){b()});a.src=c;document.body.appendChild(a)};
+(function(){
+  if((typeof(device) != 'undefined') && (device.mobile())){
+    document.getElementById("live2dcanvas").style.width = '75px';
+    document.getElementById("live2dcanvas").style.height = '150px';
+  }else
+    if (typeof(device) === 'undefined') console.error('Cannot find current-device script.');
+  loadScript("/live2d/script.js", function(){loadlive2d("live2dcanvas", "/live2d/assets/tororo.model.json", 0.5);});
+})();
+</script>
+
+  
+</body>
+</html>
